@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int c1 = sc.nextInt(), q1 = sc.nextInt();
+        int c2 = sc.nextInt(), q2 = sc.nextInt();
+        int c3 = sc.nextInt(), q3 = sc.nextInt();
+        int budget = sc.nextInt();
+        double total = c1*q1 + c2*q2 + c3*q3;
+        double afterTax = total * 1.1;
+        System.out.printf("Total (Before Tax): %.2f\n", total);
+        System.out.printf("Total (After Tax): %.2f\n", afterTax);
+        System.out.println(afterTax <= budget ? "Within Budget" : "Over Budget");
+    }
+}
